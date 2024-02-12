@@ -54,5 +54,7 @@ test.skip('Confirmation Alert',async({page})=>{
         await expect(page.locator('#demo')).toHaveText('Hello john! How are you today?')
         await page.waitForTimeout(5000);
         await page.close();
+
+        await page.waitForEvent();
         
         });
