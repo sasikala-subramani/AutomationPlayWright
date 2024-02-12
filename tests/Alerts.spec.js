@@ -53,5 +53,6 @@ test.skip('Confirmation Alert',async({page})=>{
         await page.locator('//button[normalize-space()="Prompt"]').click();
         await expect(page.locator('#demo')).toHaveText('Hello john! How are you today?')
         await page.waitForTimeout(5000);
+        await page.close();
         
         });
